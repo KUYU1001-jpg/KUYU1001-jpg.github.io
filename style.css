@@ -3,11 +3,11 @@
 -------------------- */
 
 :root {
-  --theme-color: #4fd1c5;
-  --bg-color: #0f172a;
-  --card-color: #1e293b;
-  --text-color: #e2e8f0;
-  --sub-color: #94a3b8;
+  --theme-color: #ff2b2b;
+  --bg-color: #080808;
+  --card-color: #161616;
+  --text-color: #eeeeee;
+  --sub-color: #888888;
 }
 
 * {
@@ -23,12 +23,13 @@ body {
 body {
   margin: 0;
   padding: 40px;
-  background: linear-gradient(
-    135deg,
-    #0f172a,
-    #111827,
-    #1e293b
-  );
+  background:
+    linear-gradient(
+      135deg,
+      #080808,
+      #111111,
+      #1a0c0c
+    );
   color: var(--text-color);
   font-family: "Segoe UI", sans-serif;
   line-height: 1.8;
@@ -39,21 +40,25 @@ body {
 -------------------- */
 
 section {
-  background: rgba(30, 41, 59, 0.85);
+  background: rgba(22, 22, 22, 0.9);
   padding: 25px;
   margin-bottom: 25px;
   border-radius: 16px;
-  border: 1px solid rgba(79, 209, 197, 0.2);
+  border: 1px solid rgba(255, 43, 43, 0.25);
   backdrop-filter: blur(8px);
+
   box-shadow:
-    0 8px 24px rgba(0,0,0,0.3);
+    0 8px 24px rgba(0,0,0,0.5);
+
   transition: 0.3s;
 }
 
 section:hover {
   transform: translateY(-4px);
+
   box-shadow:
-    0 12px 30px rgba(79,209,197,0.15);
+    0 0 25px rgba(255,43,43,0.2),
+    0 0 50px rgba(255,43,43,0.1);
 }
 
 /* --------------------
@@ -69,10 +74,12 @@ h3 {
 h1 {
   text-align: center;
   font-size: 3rem;
-  border-bottom: none;
   margin-bottom: 10px;
+  border-bottom: none;
+
   text-shadow:
-    0 0 10px rgba(79,209,197,0.5);
+    0 0 8px rgba(255,43,43,0.8),
+    0 0 20px rgba(255,43,43,0.3);
 }
 
 h2 {
@@ -109,8 +116,9 @@ a {
 
 a:hover {
   color: white;
+
   text-shadow:
-    0 0 8px var(--theme-color);
+    0 0 10px var(--theme-color);
 }
 
 /* --------------------
@@ -145,14 +153,14 @@ table {
 
 th {
   background: var(--theme-color);
-  color: #0f172a;
+  color: white;
   font-weight: bold;
 }
 
 td,
 th {
   padding: 12px;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 tr {
@@ -170,8 +178,19 @@ tr:nth-child(even) {
 img {
   max-width: 100%;
   border-radius: 12px;
+
   box-shadow:
-    0 4px 20px rgba(0,0,0,0.4);
+    0 0 20px rgba(255,43,43,0.15),
+    0 4px 20px rgba(0,0,0,0.6);
+
+  transition: 0.3s;
+}
+
+img:hover {
+  transform: scale(1.02);
+
+  box-shadow:
+    0 0 35px rgba(255,43,43,0.3);
 }
 
 /* --------------------
