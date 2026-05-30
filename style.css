@@ -1,0 +1,185 @@
+/* --------------------
+        全体
+-------------------- */
+
+:root {
+  --theme-color: #4fd1c5;
+  --bg-color: #0f172a;
+  --card-color: #1e293b;
+  --text-color: #e2e8f0;
+  --sub-color: #94a3b8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 40px;
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #111827,
+    #1e293b
+  );
+  color: var(--text-color);
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.8;
+}
+
+/* --------------------
+        コンテンツ
+-------------------- */
+
+section {
+  background: rgba(30, 41, 59, 0.85);
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 16px;
+  border: 1px solid rgba(79, 209, 197, 0.2);
+  backdrop-filter: blur(8px);
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+section:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 12px 30px rgba(79,209,197,0.15);
+}
+
+/* --------------------
+        見出し
+-------------------- */
+
+h1,
+h2,
+h3 {
+  color: var(--theme-color);
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  border-bottom: none;
+  margin-bottom: 10px;
+  text-shadow:
+    0 0 10px rgba(79,209,197,0.5);
+}
+
+h2 {
+  border-bottom: 2px solid var(--theme-color);
+  padding-bottom: 10px;
+}
+
+h3 {
+  border-bottom: 1px dashed var(--theme-color);
+  padding-bottom: 5px;
+}
+
+/* --------------------
+        段落
+-------------------- */
+
+p {
+  color: var(--text-color);
+}
+
+small {
+  color: var(--sub-color);
+}
+
+/* --------------------
+        リンク
+-------------------- */
+
+a {
+  color: var(--theme-color);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+a:hover {
+  color: white;
+  text-shadow:
+    0 0 8px var(--theme-color);
+}
+
+/* --------------------
+        リスト
+-------------------- */
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+li::before {
+  content: "◆";
+  color: var(--theme-color);
+  margin-right: 8px;
+}
+
+/* --------------------
+          表
+-------------------- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+th {
+  background: var(--theme-color);
+  color: #0f172a;
+  font-weight: bold;
+}
+
+td,
+th {
+  padding: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+tr {
+  background: rgba(255,255,255,0.03);
+}
+
+tr:nth-child(even) {
+  background: rgba(255,255,255,0.06);
+}
+
+/* --------------------
+        画像
+-------------------- */
+
+img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow:
+    0 4px 20px rgba(0,0,0,0.4);
+}
+
+/* --------------------
+        フッター
+-------------------- */
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  color: var(--sub-color);
+}
